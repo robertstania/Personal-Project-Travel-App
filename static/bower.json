@@ -1,0 +1,21 @@
+{
+  "name": "Titan",
+  "authors": [
+    "Tania Roberts <robertstania@outlook.com>"
+  ],
+  "description": "Bootstrap",
+  "main": "Bower Components",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "masonry": "desandro/masonry#^4.2.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "bower_components",
+  "authors": [
+    "Tania Roberts <robertstania@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
