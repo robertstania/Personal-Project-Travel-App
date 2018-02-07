@@ -9,11 +9,21 @@
 Document Title
 =============================================
 -->
-  <title>Flight Information</title>
+  <title>User Login &amp; Registration </title>
   <!--
 Favicons
 =============================================
 -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
@@ -27,7 +37,7 @@ Stylesheets
 
 -->
   <!-- Default stylesheets-->
-  <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Template specific stylesheets-->
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
@@ -41,8 +51,8 @@ Stylesheets
   <link href="/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
   <link href="/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
   <!-- Main stylesheet and color file-->
-  <link href="/css/style.css" rel="stylesheet">
-  <link id="color-scheme" href="./css/colors/default.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link id="color-scheme" href="css/colors/default.css" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -54,21 +64,22 @@ Stylesheets
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-          <a class="navbar-brand" href="index.html">Wanderlust</a>
+          <a
+            class="navbar-brand" href="index.html">Wanderlust</a>
         </div>
         <div class="collapse navbar-collapse" id="custom-collapse">
           <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
-                <ul class="dropdown-menu">
-                  <li><a href="/users">User Login &amp; Registration</a></li>
-                  <li><a
-                  href="/airlines">Airline Login</a></li>
-                  <!-- <li><a href="/Users/taniaroberts/Documents/Galvanize/Projects/travelDash/views/airline_flights.ejs">Flight Information</a></li>
-                  <li><a href="/Users/taniaroberts/Documents/Galvanize/Projects/travelDash/views/trips.ejs">Trip Information</a></li>
-                </ul>
-              </li> -->
+            <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
+              <ul class="dropdown-menu">
+                <li><a href="/users">User Login &amp; Registration</a></li>
+                <li><a
+                href="/airlines">Airline Login</a></li>
+                <!-- <li><a href="/Users/taniaroberts/Documents/Galvanize/Projects/travelDash/views/airline_flights.ejs">Flight Information</a></li>
+                <li><a href="/Users/taniaroberts/Documents/Galvanize/Projects/travelDash/views/trips.ejs">Trip Information</a></li> -->
+              </ul>
+            </li>
     </nav>
-    <section class="home-section bg-dark-30" id="home" data-background="/images/background.jpg">
+    <section class="home-section bg-dark-30" id="home" data-background="images/background.jpg">
       <div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=pOAyoUvTJSg', containment:'.home-section', startAt:1, mute:false, autoPlay:true, loop:true, opacity:2, showControls:false, showYTLogo:false, vol:25}"></div>
       <div class="video-controls-box">
         <div class="container">
@@ -77,9 +88,10 @@ Stylesheets
       </div>
       <div class="titan-caption">
         <div class="caption-content">
-          <div class="font-alt mb-90 titan-title-size-3">Welcome,</div>
-          <div class="font-alt mb-40 titan-title-size-3">Let's Plan Your Next Adventure!</div>
-          <div class="font-serif mb-60 titan-title-size-2">Wanderlust Travel</div>
+          <div class="font-alt mb-90 titan-title-size-3">One Way To Get Out Of Life</div>
+          <div class="font-alt mb-40 titan-title-size-3">Lets find some beautiful place</div>
+          <div class="font-serif mb-60 titan-title-size-2">Travel Adventure</div>
+          <a href="#login" class="font-alt section-scroll btn btn-border-w btn-round " role="button">User Login &amp; Registration</a>
         </div>
       </div>
       </div>
@@ -87,46 +99,47 @@ Stylesheets
     <section class="module">
       <div class="container">
         <div class="row">
-          <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
-          </div>
-        </div>
-      </div>
-        <h1 class="font-alt mb-90 titan-title-size-3 pr-remove"><%= airline.name %></h1>
-        <section class="module">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
-                <h4 class="font-alt">Create New Flight:</h4>
-                  <hr class="divider-w mb-10">
-                    <form class="form" action="/airlines/<%= airline.id %>/flights" method="post">
-                      <div class="form-group">
-                        <input class="form-control input-lg" style="border-radius: 5px;" type="text" name="start" placeholder="NEW START"/>
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control input-lg" style="border-radius: 5px;" type="text" name="destination" placeholder="NEW DESTINATON"/>
-                      </div>
-                      <button class="btn btn-round btn-b">LET"S DO THIS!</button>
-                    </form>
+          <div id="login" class="col-sm-5 col-sm-offset-1 mb-sm-40">
+            <h4 class="font-alt">Login</h4>
+            <hr class="divider-w mb-10">
+            <form class="form" action="/users/login" method="post">
+              <div class="form-group">
+                  <input class="form-control" style="border-radius: 5px;" type="text" name="email" placeholder="EMAIL ADDRESS" />
+                </div>
+                <div class="form-group">
+                  <input class="form-control" style="border-radius: 5px;" type="password" name="password" placeholder="PASSWORD" />
+                </div>
+                <div class="form-group">
+                <!-- <button class="btn btn-round btn-b">Login</button> -->
+                <input type="submit" class="btn btn-round btn-b" value="LOGIN">
               </div>
-
-              <!-- DELETE FROM HERE -->
-
-            <div class="col-sm-5">
-              <h4 class="font-alt">Schedule Flights</h4>
-                <hr class="divider-w mb-10">
-                <form class="form" action="/users/register" method="post">
-                  <div class="form-group">
-                    <% for(var i = 0; i < flights.length; i++){ %>
-                    <div>
-                    <input disabled class="form-control mb-20 input-lg" style="border-radius: 5px;" type="text" value="FROM: <%= flights[i].start%> - TO: <%= flights[i].destination%>"/>
-                    </div>
-                  <% } %>
-                </form>
+              <!-- <div class="form-group"><a href="">Forgot Password?</a> -->
+              <div class="form-group"><a href=""><%= message %></a>
               </div>
-              <!-- TO HERE -->
-            </div>
+            </form>
           </div>
-        </section>
+          <div class="col-sm-5">
+            <!-- <b><%= message %></b> -->
+            <h4 class="font-alt">Register</h4>
+            <hr class="divider-w mb-10">
+            <form class="form" action="/users/register" method="post">
+              <div class="form-group">
+                <input class="form-control" style="border-radius: 5px;" type="text" name="email" placeholder="EMAIL ADDRESS" />
+              </div>
+              <div class="form-group">
+                <input class="form-control" style="border-radius: 5px;" type="text" name="name" placeholder="FIRST &amp; LAST NAME" />
+              </div>
+              <div class="form-group">
+                <input class="form-control" style="border-radius: 5px;" type="password" name="password" placeholder="PASSWORD" />
+              </div>
+              <div class="form-group">
+                <!-- <input class="form-control" type="password" name="re-password" placeholder="Re-enter Password" /> -->
+              </div>
+              <div class="form-group">
+                <!-- <button class="btn btn-block btn-round btn-b">Register</button> -->
+                <input type="submit" class="btn btn-round btn-b" value="REGISTER">
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -148,7 +161,7 @@ Stylesheets
               <ul class="icon-list">
                 <li>Barbara on <a href="#">Travel Essentials</a></li>
                 <li>Tania on <a href="#">Top 10 Exotic Locations</a></li>
-                <li>Sarah on <a href="#">Past Resort Trips</a></li>
+                <li>Sarah on <a href="#"></a>Past Resort Trips</li>
                 <li>Nina on <a href="#">Free Getaway to Greece</a></li>
               </ul>
             </div>
@@ -177,9 +190,10 @@ Stylesheets
                   </div>
                 </li>
                 <li class="clearfix">
-                  <div class="widget-posts-image"><a href="#"><img src="/images/rp-2.jpg" alt="Post Thumbnail"/></a></div>
+                 <div class="widget-posts-image"><a href="#"><img src="/images/rp-2.jpg" alt="Post Thumbnail"/></a></div>
+                  <div class="widget-posts-image"></div>
                   <div class="widget-posts-body">
-                    <div class="widget-posts-title"><a href="#">Journey of a Lifetime</a></div>
+                    <div class="icon-list"><a href="#">Journey of a Lifetime</a></div>
                     <div class="widget-posts-meta">15 February</div>
                   </div>
                 </li>
@@ -210,19 +224,19 @@ Stylesheets
 JavaScripts
 =============================================
 -->
-  <script src="/lib/jquery/dist/jquery.js"></script>
-  <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/lib/wow/dist/wow.js"></script>
-  <script src="/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
-  <script src="/lib/isotope/dist/isotope.pkgd.js"></script>
-  <script src="/lib/imagesloaded/imagesloaded.pkgd.js"></script>
-  <script src="/lib/flexslider/jquery.flexslider.js"></script>
-  <script src="/lib/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script src="/lib/smoothscroll.js"></script>
-  <script src="/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
-  <script src="/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
-  <script src="/js/plugins.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="lib/wow/dist/wow.js"></script>
+  <script src="lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
+  <script src="lib/isotope/dist/isotope.pkgd.js"></script>
+  <script src="lib/imagesloaded/imagesloaded.pkgd.js"></script>
+  <script src="lib/flexslider/jquery.flexslider.js"></script>
+  <script src="lib/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="lib/smoothscroll.js"></script>
+  <script src="lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
+  <script src="lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

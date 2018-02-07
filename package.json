@@ -16,6 +16,7 @@
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "knex": "^0.13.0",
+    "packages": "0.0.8",
     "pg": "^7.3.0"
   }
 }
