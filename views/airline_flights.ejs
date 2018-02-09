@@ -98,31 +98,34 @@ Stylesheets
       <div class="container">
         <div class="row">
           <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
+              </div>
+              </div>
+            </form>
           </div>
-        </div>
-      </div>
-        <h1 class="font-alt mb-90 titan-title-size-3 pr-remove"><%= airline.name %></h1>
-        <section class="module">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
+          <h1 class="font-alt mb-90 titan-title-size-3 pr-remove"><%= airline.name %></h1>
+          <section class="module">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
                 <h4 class="font-alt">Create New Flight:</h4>
-                  <hr class="divider-w mb-10">
-                    <form class="form" action="/airlines/<%= airline.id %>/flights" method="post">
-                      <div class="form-group">
-                        <input class="form-control input-lg" style="border-radius: 5px;" type="text" name="start" placeholder="NEW START"/>
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control input-lg" style="border-radius: 5px;" type="text" name="destination" placeholder="NEW DESTINATON"/>
-                      </div>
-                      <button class="btn btn-round btn-b">LET"S DO THIS!</button>
-                    </form>
+                <hr class="divider-w mb-10">
+                <form class="form" action="/airlines/<%= airline.id %>/flights" method="post">
+                  <div class="form-group">
+                    <input class="form-control input-lg" style="border-radius: 5px;" type="text" name="start" placeholder="NEW START"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control input-lg" style="border-radius: 5px;" type="text" name="destination" placeholder="NEW DESTINATON"/>
+                  </div>
+                  <button class="btn btn-round btn-b">LET"S DO THIS!</button>
+                </form>
+
+
               </div>
 
               <!-- DELETE FROM HERE -->
 
-            <div class="col-sm-5">
-              <h4 class="font-alt">Schedule Flights</h4>
+              <div class="col-sm-5">
+                <h4 class="font-alt">Schedule Flights</h4>
                 <hr class="divider-w mb-10">
                 <form class="form" action="/users/register" method="post">
                   <div class="form-group">
@@ -133,7 +136,9 @@ Stylesheets
                   <% } %>
                 </form>
               </div>
+
               <!-- TO HERE -->
+
             </div>
           </div>
         </section>
